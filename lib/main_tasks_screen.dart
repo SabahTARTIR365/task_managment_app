@@ -11,17 +11,23 @@ class _MainTasksScreenState extends State<MainTasksScreen> {
   Widget build(BuildContext context) {
    return Scaffold
      (
-     appBar: AppBar(
-     title: Text('Hello Sabah,',
-       style: TextStyle(color: Colors.black),),
-     backgroundColor: Colors.white,),
      body: Column(children: [
-
-
+       Container(
+         margin:const EdgeInsets.all(30),
+         child: Row(
+         children: [
+           Expanded(
+             child: Text('Hello, Sabah',
+               style: TextStyle(color: Colors.black,fontSize: 20, fontWeight: FontWeight.bold,),),
+           ),
+          
+           Icon(Icons.notifications_none_outlined),
+         ],
+       ),),
 
      ],),
      bottomNavigationBar: Container(
-       margin:const EdgeInsets.all(30),//height:60,
+       margin:const EdgeInsets.all(30),
 
     child: ClipRRect(
     borderRadius:  BorderRadius.circular(20),
