@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 class ToDoWidget extends StatelessWidget{
- late  String projrctName;
- late String taskName;
+ //late  String projrctName;
+ //late String taskName;
 
   @override
   Widget build(BuildContext context) {
