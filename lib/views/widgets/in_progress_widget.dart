@@ -5,33 +5,24 @@ class InProgressWidget extends StatelessWidget{
 
   @override
   Widget build(BuildContext context) {
-    return  Container(
-      margin:EdgeInsets.all(20),
-      width:150,
-      height: 150,
+    return Container(
+      margin:EdgeInsets.all(5),
+      width:0.9*MediaQuery.of(context).size.width,
+      height: 80,
       decoration:  BoxDecoration(
-        borderRadius: BorderRadius.circular(30),
+        borderRadius: BorderRadius.circular(20),
         color:   Color(0xffF0F0FC),),
-      child: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: Column(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          SizedBox(height: 5),
+          Text("    Project1",style: TextStyle(color: Colors.black54,fontSize: 13)),
+          // SizedBox(height:5),
+          Text('    Create task1',
+            style: TextStyle(color: Colors.black54,fontSize: 16, fontWeight: FontWeight.bold,),),
+          Text("     2 hours",style: TextStyle(color: Colors.black54,fontSize: 13)),
 
-          children: [
-            SizedBox(height: 10),
-            Text("Social media project",style: TextStyle(color: Colors.black54,)),
-            SizedBox(height: 20),
-            const Text('Create splash screen ',
-              style: TextStyle(color: Colors.black54,fontSize: 18, fontWeight: FontWeight.bold,),),
-            SizedBox(height: 20),
-            Row(
-              children: [
-                Icon(Icons.circle,color: Colors.green,size: 10,),
-                Text(" 20 march 2022",style: TextStyle(color: Colors.black54,)),
-              ],
-            ),
-
-          ],
-        ),
+        ],
       ),
     );
   }
